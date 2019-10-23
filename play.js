@@ -7,6 +7,5 @@ connect();
 setupInput();
 
 
-console.log('Connecting ...');
 
 
