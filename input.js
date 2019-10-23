@@ -18,7 +18,6 @@ let conn = connect();
 
 handler(input => {
       if (input === "w") {
-        console.log("up")
         conn.write("Move: up");
       }
       if (input === 's') {
@@ -30,8 +29,12 @@ handler(input => {
       if (input === 'd') {
       conn.write("Move: right");
       }
-      if(input === '\u0003')
+      if(input === '\u0003'){
       process.exit();
+      }
+      if (input === "y") {
+        conn.write("Say: Yo!");
+      }
     })
 
     module.exports = {setupInput};
