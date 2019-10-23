@@ -1,3 +1,5 @@
+const { connect } = require('./client');
+
 const setupInput = function() {
   const stdin = process.stdin;
   stdin.setRawMode(true);
@@ -12,6 +14,7 @@ const setupInput = function() {
 }
 
 const handler = setupInput()
+let conn = connect();
 
 handler(input => {
       if (input === "w") {
