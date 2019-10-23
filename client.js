@@ -11,6 +11,7 @@ const connect = function (stdin) {
   conn.on('connect', connect => {
     console.log('Successfully connected to game server');
     conn.write("Name: HLD");
+    // conn.write("Say: Yoo");
 
 });
 
