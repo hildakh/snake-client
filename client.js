@@ -1,14 +1,5 @@
 const net = require('net');
 
-// const setupInput = function() {
-//   const stdin = process.stdin;
-//   stdin.setRawMode(true);
-//   stdin.setEncoding('utf8');
-//   stdin.resume();
-//   return stdin;
-
-// }
-
 const connect = function (stdin) {
   const conn = net.createConnection({
     host: '192.168.88.149',
@@ -22,16 +13,11 @@ const connect = function (stdin) {
     conn.write("Name: HLD");
 
 });
-  //     if(data === '\u0003')
-  //     process.exit();
-  //   })
-
-  // })
 
   return conn;
 };
 
 
-module.exports = connect;
+module.exports = {connect};
 // module.exports = setupInput;
 
